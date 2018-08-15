@@ -7,7 +7,7 @@ function respond() {
   var request = JSON.parse(this.req.chunks[0]),
       botRegex = /^\hello$/;
 
-  if(request.user_id == "6073141") {
+  if(request.user_id == "14523500") {
     this.res.writeHead(200);
     postMessage();
     this.res.end();
@@ -21,7 +21,7 @@ function respond() {
 function postMessage() {
   var botResponse, options, body, botReq;
 
-  botResponse = "Go to hell"
+  botResponse = "Shut up retard"
 
   options = {
     hostname: 'api.groupme.com',
