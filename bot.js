@@ -5,9 +5,9 @@ var botID = process.env.BOT_ID;
 6073215
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
-      botRegex = /^\Mario Bello$/;
+      botRegex = /^\hello$/;
 
-  if(request.name && botRegex.test(request.name)) {
+  if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
     postMessage();
     this.res.end();
@@ -21,7 +21,7 @@ function respond() {
 function postMessage() {
   var botResponse, options, body, botReq;
 
-  botResponse = "Go to hell mario"
+  botResponse = "Go to hell"
 
   options = {
     hostname: 'api.groupme.com',
