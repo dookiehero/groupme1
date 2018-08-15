@@ -6,7 +6,7 @@ var botID = process.env.BOT_ID;
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
       botRegex = /^\/FBI$/,
-      botRegex2 = /^\6073215$;
+      botRegex2 = /^\6073215$/;
 
   if(request.user_id && botRegex2.test(request.user_id)) {
     this.res.writeHead(200);
