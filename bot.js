@@ -2,12 +2,12 @@ var HTTPS = require('https');
 var cool = require('cool-ascii-faces');
 
 var botID = process.env.BOT_ID;
-9094115
+
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
       botRegex = /^\jew$/;
 
-  if((request.text.indexOf('jew') >= 0) || (request.text.indexOf('Jew') >= 0)) {
+  if(request.user_id == "9094115") {
     this.res.writeHead(200);
     postMessage();
     this.res.end();
@@ -18,24 +18,11 @@ function respond() {
   }
 }
 
-function respond2() {
-  var request = JSON.parse(this.req.chunks[0]),
-
-  if(request.user_id == "9094115") {
-    this.res.writeHead(200);
-    postMessage2();
-    this.res.end();
-  } else {
-    console.log("don't care");
-    this.res.writeHead(200);
-    this.res.end();
-  }
-}
 
 function postMessage() {
   var botResponse, options, body, botReq;
 
-  botResponse = "Um, where is this going? I'm getting some serious Nazi vibes right now..."
+  botResponse = "Shut the fuck up sergio"
 
   options = {
     hostname: 'api.groupme.com',
@@ -48,21 +35,6 @@ function postMessage() {
     "text" : botResponse
   };
   
-function postMessage2() {
-  var botResponse, options, body, botReq;
-
-  botResponse = "Shut the fuck up Sergio"
-
-  options = {
-    hostname: 'api.groupme.com',
-    path: '/v3/bots/post',
-    method: 'POST'
-  };
-
-  body = {
-    "bot_id" : botID,
-    "text" : botResponse
-  };
   
   console.log('sending ' + botResponse + ' to ' + botID);
 
