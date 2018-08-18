@@ -7,7 +7,7 @@ function respond() {
   var request = JSON.parse(this.req.chunks[0]),
       botRegex = /^\jew$/;
 
-  if(request.user_id == "9094115") {
+  if(request.user_id == "") {
     this.res.writeHead(200);
     postMessage();
     this.res.end();
